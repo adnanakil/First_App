@@ -1,241 +1,114 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Ruby on Rails: Welcome aboard</title>
-    <style type="text/css" media="screen">
-      body {
-        margin: 0;
-        margin-bottom: 25px;
-        padding: 0;
-        background-color: #f0f0f0;
-        font-family: "Lucida Grande", "Bitstream Vera Sans", "Verdana";
-        font-size: 13px;
-        color: #333;
-      }
+<!DOCTYPE html> 
+<html lang="en">	
+	<head>		
+		<meta charset="utf-8"> 
+		<title>Adnan Akil</title> 
+        
+        <link rel="stylesheet" href="style.css" />
+        
+        <!--[if IE 6]>
+            <style>body { behavior: url("styles/ie6-hover-fix.htc"); }</style>
+            <link rel="stylesheet" href="styles/ie6.css" />
+        <![endif]--> 
+        <!--[if IE 7]>
+            <link rel="stylesheet" href="styles/ie7.css" />
+        <![endif]-->
+        <!--[if IE 8]>
+            <link rel="stylesheet" href="styles/ie8.css" />
+        <![endif]-->               		 
+		 
+	</head> 
+	
+	<body> 
+	
+		<div id="top-banner"></div> 
+		
+		<div id="wrap"> 
+        	<div id="header"> 
+				
+				<h1><a href="index.html">Adnan Akil</a></h1> <br><br> <br>       	             	
+            	<h2>[Bioengineer]</h2> 
+                      	
+					<ul id="nav">
+						<li class="current"><a href="index.html">Home</a><span>/</span></li>
+						<li><a href="page.html">Services</a><span>/</span>
+					
+						</li>
+						<li><a href="portfolio.html">Portfolio</a><span>/</span></li>
+						<li><a href="research.html">Research</a><span>/</span></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+							        
+            </div><!--end header-->    
+                        
+            <div id="frontpage-content"> 
+     	    	    	
+		    	<div id="featured-section">    	
+		    		<h3></h3>   	
+		    		<img id="featured-section-img" src="images/face.jpg" width="400" alt="featured section image" />	  		
+		    		<div id="featured-section-details">   
+		    			<h4>I study biotechnology so you can live longer</h4> 
+		    			<p>Tissue engineering is a rapidly growing field for long lasting therapeutic techniques that can yield lasting change </p> 
+		    			<a class="button" href="portfolio.html">View My Portfolio</a> 
+		    		</div><!--end featured-section-details-->    	
+		    	</div><!--end featured-section--> 
+		    	
+		    	<div class="line"></div>     	
+    	    
+		    	<div id="latest-projects">   	
+		   <!--
+		    		<h3>My Latest Projects</h3>    		
+		    		
+		    		<div class="latest-project first-latest-project">	      	   
+						<p>[Project Title]</p>	    					
+						<a href="#"><img width="280" height="190" src="#" class="post-image" alt="[alt text]" title="[title text]" /></a> 		    			</div><end latest-project-->				
+			<!--		
+					<div class="latest-project">	      	   
+						<p>[Project Title]</p>    					
+						<a href="#"><img width="280" height="190" src="#" class="post-image" alt="[alt text]" title="[title text]" /></a> 
+		    		</div><!--end latest-project-->				
+				<!--		       			
+					<div class="latest-project">	      	   
+						<p>[Project Title]</p>	    					
+						<a href="#"><img width="280" height="190" src="#" class="post-image" alt="[alt text]" title="[title text]" /></a>   					</div><!--end latest-project-->
+			<!--											  
+		    	</div><!--end latest-projects--> 
+	    	
+	
+	    		<div class="line"></div> 
 
-      h1 {
-        font-size: 28px;
-        color: #000;
-      }
-
-      a  {color: #03c}
-      a:hover {
-        background-color: #03c;
-        color: white;
-        text-decoration: none;
-      }
-
-
-      #page {
-        background-color: #f0f0f0;
-        width: 750px;
-        margin: 0;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      #content {
-        float: left;
-        background-color: white;
-        border: 3px solid #aaa;
-        border-top: none;
-        padding: 25px;
-        width: 500px;
-      }
-
-      #sidebar {
-        float: right;
-        width: 175px;
-      }
-
-      #footer {
-        clear: both;
-      }
-
-      #header, #about, #getting-started {
-        padding-left: 75px;
-        padding-right: 30px;
-      }
-
-
-      #header {
-        background-image: url("/assets/rails.png");
-        background-repeat: no-repeat;
-        background-position: top left;
-        height: 64px;
-      }
-      #header h1, #header h2 {margin: 0}
-      #header h2 {
-        color: #888;
-        font-weight: normal;
-        font-size: 16px;
-      }
-
-
-      #about h3 {
-        margin: 0;
-        margin-bottom: 10px;
-        font-size: 14px;
-      }
-
-      #about-content {
-        background-color: #ffd;
-        border: 1px solid #fc0;
-        margin-left: -55px;
-        margin-right: -10px;
-      }
-      #about-content table {
-        margin-top: 10px;
-        margin-bottom: 10px;
-        font-size: 11px;
-        border-collapse: collapse;
-      }
-      #about-content td {
-        padding: 10px;
-        padding-top: 3px;
-        padding-bottom: 3px;
-      }
-      #about-content td.name  {color: #555}
-      #about-content td.value {color: #000}
-
-      #about-content ul {
-        padding: 0;
-        list-style-type: none;
-      }
-
-      #about-content.failure {
-        background-color: #fcc;
-        border: 1px solid #f00;
-      }
-      #about-content.failure p {
-        margin: 0;
-        padding: 10px;
-      }
-
-
-      #getting-started {
-        border-top: 1px solid #ccc;
-        margin-top: 25px;
-        padding-top: 15px;
-      }
-      #getting-started h1 {
-        margin: 0;
-        font-size: 20px;
-      }
-      #getting-started h2 {
-        margin: 0;
-        font-size: 14px;
-        font-weight: normal;
-        color: #333;
-        margin-bottom: 25px;
-      }
-      #getting-started ol {
-        margin-left: 0;
-        padding-left: 0;
-      }
-      #getting-started li {
-        font-size: 18px;
-        color: #888;
-        margin-bottom: 25px;
-      }
-      #getting-started li h2 {
-        margin: 0;
-        font-weight: normal;
-        font-size: 18px;
-        color: #333;
-      }
-      #getting-started li p {
-        color: #555;
-        font-size: 13px;
-      }
-
-
-      #sidebar ul {
-        margin-left: 0;
-        padding-left: 0;
-      }
-      #sidebar ul h3 {
-        margin-top: 25px;
-        font-size: 16px;
-        padding-bottom: 10px;
-        border-bottom: 1px solid #ccc;
-      }
-      #sidebar li {
-        list-style-type: none;
-      }
-      #sidebar ul.links li {
-        margin-bottom: 5px;
-      }
-
-      .filename {
-        font-style: italic;
-      }
-    </style>
-    <script type="text/javascript">
-      function about() {
-        info = document.getElementById('about-content');
-        if (window.XMLHttpRequest)
-          { xhr = new XMLHttpRequest(); }
-        else
-          { xhr = new ActiveXObject("Microsoft.XMLHTTP"); }
-        xhr.open("GET","rails/info/properties",false);
-        xhr.send("");
-        info.innerHTML = xhr.responseText;
-        info.style.display = 'block'
-      }
-    </script>
-  </head>
-  <body>
-    <div id="page">
-      <div id="sidebar">
-        <ul id="sidebar-items">
-          <li>
-            <h3>Browse the documentation</h3>
-            <ul class="links">
-              <li><a href="http://guides.rubyonrails.org/">Rails Guides</a></li>
-              <li><a href="http://api.rubyonrails.org/">Rails API</a></li>
-              <li><a href="http://www.ruby-doc.org/core/">Ruby core</a></li>
-              <li><a href="http://www.ruby-doc.org/stdlib/">Ruby standard library</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-
-      <div id="content">
-        <div id="header">
-          <h1>Welcome aboard</h1>
-          <h2>You&rsquo;re riding Ruby on Rails!</h2>
-        </div>
-
-        <div id="about">
-          <h3><a href="rails/info/properties" onclick="about(); return false">About your application&rsquo;s environment</a></h3>
-          <div id="about-content" style="display: none"></div>
-        </div>
-
-        <div id="getting-started">
-          <h1>Getting started</h1>
-          <h2>Here&rsquo;s how to get rolling:</h2>
-
-          <ol>
-            <li>
-              <h2>Use <code>rails generate</code> to create your models and controllers</h2>
-              <p>To see all available options, run it without parameters.</p>
-            </li>
-
-            <li>
-              <h2>Set up a default route and remove <span class="filename">public/index.html</span></h2>
-              <p>Routes are set up in <span class="filename">config/routes.rb</span>.</p>
-            </li>
-
-            <li>
-              <h2>Create your database</h2>
-              <p>Run <code>rake db:create</code> to create your database. If you're not using SQLite (the default), edit <span class="filename">config/database.yml</span> with your username and password.</p>
-            </li>
-          </ol>
-        </div>
-      </div>
-
-      <div id="footer">&nbsp;</div>
-    </div>
-  </body>
+	    		<div id="overview"> 
+	    		
+		    		<div class="overview-block first"> 
+		    			<h4>About Me</h4> 
+		    			<p>I've been designing and developing high quality websites for over 12 years. My clients include a range of small businesses, agencies, and academic institutions.</p>
+						<p><a href="#">Learn More About Me » </a></p>
+					</div><!--end overview-block--> 
+		    		
+		    		<div class="overview-block"> 
+		    			<h4>Services Available</h4> 
+		    			<p>My core services include web design and development, search engine optimisation, online branding and marketing, and user experience consultancy work.</p>
+		    			<p><a href="#">View Services Available »</a></p>
+		    		</div><!--end overview-block--> 
+		    		
+		    		<div class="overview-block"> 
+		    			<h4>Online Publications</h4> 
+		    			<p>I've written articles and tutorials for several leading online magazines over the past five years with a specific focus on front end design and development work.</p>
+						<p><a href="#">View All Publications »</a></p>
+					</div><!--end overview-block-->
+				
+	    		</div><!--end overview--> 
+ 	        		        	             
+    		</div><!--end frontpage-content--> 
+ 
+			<div class="line"></div>
+			 
+			<div id="footer"> 
+				<p class="copyright">Copyright © 2011 / [Your Name] / All Rights Reserved</p> 
+				<p class="social"><a href="http://www.twitter.com/adnanakil">Don't Follow Me On Twitter »</a></p> 
+			</div><!--end footer-->
+		 
+		</div><!--end wrap--> 
+          
+	</body> 
 </html>
